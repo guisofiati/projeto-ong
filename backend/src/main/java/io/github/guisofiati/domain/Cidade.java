@@ -1,7 +1,6 @@
 package io.github.guisofiati.domain;
 
 import java.io.Serializable;
-import java.time.Instant;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,23 +15,19 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
-@Table(name = "tb_trabalho")
-public class Trabalho implements Serializable {
+@Table(name = "tb_cidade")
+public class Cidade implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	private String titulo;
-	private String descricao;
-	private String local;
-	private String inicioTermino;
-	private Instant momento;
+	private Integer id;
+	private String nome;
 	
 	@ManyToOne
-	@JoinColumn(name = "categoria_id")
-	private Categoria categoria;
+	@JoinColumn(name="estado_id")
+	private Estado estado;
 }

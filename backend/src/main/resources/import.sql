@@ -21,3 +21,11 @@ INSERT INTO tb_cliente (id, cpf_ou_cnpj, email, nome, tipo, trabalho_id) VALUES 
 
 INSERT INTO tb_trabalho_aceito (inicio_termino, local, status, cliente_id, trabalho_id) VALUES ('05-11-2000 à 15-11-2000', 'Brás', 1, 1, 1);
 INSERT INTO tb_trabalho_aceito (inicio_termino, local, status, cliente_id, trabalho_id) VALUES ('06-11-2000 à 16-11-2000', 'São Bernardo do Campo', 1, 2, 2);
+
+INSERT INTO tb_estado (nome) VALUES ('SP');
+INSERT INTO tb_estado (nome) VALUES ('RJ');
+INSERT INTO tb_estado (nome) VALUES ('PR');
+
+INSERT INTO tb_cidade (nome, estado_id) VALUES ('São Paulo', 1);
+INSERT INTO tb_cidade (nome, estado_id) VALUES ('Arraial do Cabo', 2);
+INSERT INTO tb_cidade (nome, estado_id) VALUES ('Curitiba', 3);
